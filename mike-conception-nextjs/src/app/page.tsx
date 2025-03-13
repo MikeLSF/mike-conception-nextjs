@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ServiceCarousel from '../components/ServiceCarousel';
 
 export default function Home() {
   return (
@@ -14,7 +15,6 @@ export default function Home() {
         />
         
         {/* Décorations ajustées */}
-        {/* Ligne gauche */}
         <div className="absolute left-0 bottom-0 transform translate-x-[-30%] translate-y-[20%]">
           <Image
             src="/images/ligne_gauche.png"
@@ -24,7 +24,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Rond droite */}
         <div className="absolute right-0 top-1/4 transform translate-x-[30%]">
           <Image
             src="/images/rond_droite.png"
@@ -34,7 +33,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Ligne droite */}
         <div className="absolute right-0 bottom-0 transform translate-y-[30%]">
           <Image
             src="/images/ligne_droite.png"
@@ -73,6 +71,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Ajout du carousel de services */}
+      <ServiceCarousel />
     </main>
   );
 }
